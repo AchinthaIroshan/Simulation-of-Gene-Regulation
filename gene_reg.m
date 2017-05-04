@@ -19,10 +19,11 @@ end
 hold on;
     
 for i= 1:10
-   
+   line([0 0],[0 10],'Linewidth',6+i)
    line([0 i],[10 i+10],'Linewidth',6)
    line([0 -i],[10 i+10],'Linewidth',6)
    pause(0.5);
+   
 end
 
 hold on;
