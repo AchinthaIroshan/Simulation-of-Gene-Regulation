@@ -1,0 +1,30 @@
+function [theta1,theta2,xo,yo] = growing(x,y,alpha)
+
+length = 0;
+i=0;
+
+while length<10
+    if(alpha==pi/2)
+        yo=y+i;
+        xo=x;
+        line([x xo],[y yo],'Linewidth',6)
+        pause(0.5);
+        i=i+1;
+        length=length+1;
+    else
+        xo=x+i;
+        yo=y+i*tan(alpha);
+        line([x xo],[y yo],'Linewidth',6)
+        pause(0.5);
+        i=i+1;
+        length=i/cos(alpha);
+    end
+   
+
+end
+
+
+theta1 = alpha+pi/4;
+theta2 = alpha-pi/4;
+
+
